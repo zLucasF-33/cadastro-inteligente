@@ -1,0 +1,123 @@
+:root {
+    --verde: #28a745;
+    --vermelho: #dc3545;
+    --laranja: #fd7e14;
+    --amarelo: #ffc107;
+    --cinza: #ccc;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cinza);
+    border-radius: 5px;
+    outline: none;
+}
+
+input.error {
+    border-color: var(--vermelho);
+}
+
+input.success {
+    border-color: var(--verde);
+}
+
+small {
+    color: var(--vermelho);
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: var(--verde);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: gray;
+}
+
+.success {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--verde);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Barra de força */
+.strength-bar {
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background: #eee;
+}
+
+.strength-bar.fraca {
+    background: var(--vermelho);
+}
+
+.strength-bar.razoavel {
+    background: var(--laranja);
+}
+
+.strength-bar.boa {
+    background: var(--amarelo);
+}
+
+.strength-bar.forte {
+    background: var(--verde);
+}
+
+.strength-text {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Spinner simples */
+.spinner {
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
